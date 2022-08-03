@@ -53,7 +53,7 @@ describe('Slice 1: Clicking & Incrementing Coffee', function() {
   });
   // First, we're having you write a function that will run every time the coffee icon is clicked. You don't need to attach this as an event listener, as we've done that for you near the bottom of `script.js`.
   describe('The updateCoffeeView function', function() {
-    xit('calls document.getElementById() or document.querySelector()', function() {
+    it('calls document.getElementById() or document.querySelector()', function() {
       const spyOnGetElementById = sinon.spy(document, 'getElementById');
       const spyOnQuerySelector = sinon.spy(document, 'querySelector');
       code.updateCoffeeView(); // this is where we actually run your code
@@ -64,7 +64,7 @@ describe('Slice 1: Clicking & Incrementing Coffee', function() {
       spyOnQuerySelector.restore();
     });
 
-    xit('updates the coffee counter to display the current coffee count', function() {
+    it('updates the coffee counter to display the current coffee count', function() {
       const coffeeCounter = document.getElementById('coffee_counter');
       code.updateCoffeeView(4000);
       expect(coffeeCounter.innerText).to.equal(4000);
@@ -74,13 +74,13 @@ describe('Slice 1: Clicking & Incrementing Coffee', function() {
   });
 
   describe('The clickCoffee function', function() {
-    xit('increments the coffee count by one', function() {
+    it('increments the coffee count by one', function() {
       const data = { coffee: 0, producers: [] };
       code.clickCoffee(data);
       expect(data.coffee).to.equal(1);
     });
     // Here, we're not checking to see that you call updateCoffeeView, the function you wrote above. However, it would be a good idea to do so!
-    xit('updates the coffee counter element with the incremented value', function() {
+    it('updates the coffee counter element with the incremented value', function() {
       const coffeeCounter = document.getElementById('coffee_counter');
       const data = { coffee: 50, producers: [] };
       code.clickCoffee(data);
@@ -117,7 +117,7 @@ describe('Slice 2: Unlocking & Rendering Producers', function() {
       };
     });
 
-    xit("changes `unlocked` to `true` when the player's coffee count is equal to or larger than half the initial price of the producer", function() {
+    it("changes `unlocked` to `true` when the player's coffee count is equal to or larger than half the initial price of the producer", function() {
       data.coffee = 100;
       code.unlockProducers(data.producers, data.coffee);
       expect(data.producers[0].unlocked).to.equal(true);
@@ -125,7 +125,7 @@ describe('Slice 2: Unlocking & Rendering Producers', function() {
       expect(data.producers[2].unlocked).to.equal(false);
     });
 
-    xit('does not set `unlocked` to `false` once a producer has been unlocked, even if the coffee count drops again', function() {
+    it('does not set `unlocked` to `false` once a producer has been unlocked, even if the coffee count drops again', function() {
       data.coffee = 100;
       code.unlockProducers(data.producers, data.coffee);
       data.coffee = 0;

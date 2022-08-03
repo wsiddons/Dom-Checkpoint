@@ -5,11 +5,17 @@
  **************/
 
 function updateCoffeeView(coffeeQty) {
-  // your code here
+  let coffeeCounter = document.getElementById('coffee_counter')
+  coffeeCounter.innerText = coffeeQty
+  return parseInt(coffeeCounter.innerText)
+  
 }
 
 function clickCoffee(data) {
-  // your code here
+  let coffeeCounter = document.getElementById('coffee_counter')
+  data.coffee++
+  coffeeCounter.innerText = data.coffee
+  return parseInt(coffeeCounter.innerText)
 }
 
 /**************
@@ -17,7 +23,9 @@ function clickCoffee(data) {
  **************/
 
 function unlockProducers(producers, coffeeCount) {
-  // your code here
+  // if (coffeeCount % 2 >= producers)
+  console.log(producers)
+  console.log(coffeeCount)
 }
 
 function getUnlockedProducers(data) {
