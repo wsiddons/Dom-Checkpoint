@@ -13,9 +13,19 @@ function updateCoffeeView(coffeeQty) {
 
 function clickCoffee(data) {
   let coffeeCounter = document.getElementById('coffee_counter')
+  let bigCoffee = document.getElementById('big_coffee')
   data.coffee++
   coffeeCounter.innerText = data.coffee
   renderProducers(data)
+
+  // animate bigCoffee
+  setInterval(() => {
+    bigCoffee.style.fontSize = '128px'
+
+  }, 1000)
+  bigCoffee.style.fontSize = '150px'  
+  
+
   return parseInt(coffeeCounter.innerText)
 }
 

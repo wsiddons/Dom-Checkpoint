@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
 }
 body {
   margin: 0px;
@@ -37,16 +38,45 @@ body {
   border: 5px groove brown;
 }
 
+.container.right {
+  background-color: #522500;
+}
+
+.producer {
+  background-color: #E8AF75;
+}
+
+.producer button {
+  color: #522500
+}
+
+.producer button:hover {
+  background-color: #522500;
+  color: #E8AF75;
+}
+
 .column-header {
   font-size: 25px;
   position: relative;
   background-color: white;
   top: 8px;
 }
+
+/* @keyframes bigCoffeAnim {
+  0% {font-size: 128px;}
+  50% {font-size: 150px;}
+  100% {font-size: 128px;}
+} */
+
 #big_coffee {
   user-select: none;
   font-size: 128px;
   cursor: pointer;
+}
+
+.text-container {
+  position: fixed;
+  margin-bottom: 300px;
 }
 
 .counter-container {
