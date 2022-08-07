@@ -30,6 +30,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(https://i.gifer.com/fyPW.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 5px groove brown;
 }
 
 .column-header {
@@ -47,10 +52,12 @@ body {
 .counter-container {
   font-size: 30px;
   margin: 10px;
+  color: white;
 }
 
 .cps-container {
   font-size: 20px;
+  color: white;
 }
 
 #producer_container {
